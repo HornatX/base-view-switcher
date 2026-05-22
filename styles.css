@@ -10,7 +10,6 @@
     min-width: 0;   
     overflow-x: auto; 
     margin-left: 4px;
-    scrollbar-width: none; 
 }
 .my-base-btns-container::-webkit-scrollbar { display: none; }
 .my-base-btn {
@@ -22,155 +21,28 @@
 /* ==========================================================
    动态隐藏元素的样式 (精准作用于特定文件视图)
 ========================================================== */
-.bvs-view.bvs-hide-result-count .bases-toolbar-item.bases-toolbar-result-count { display: none !important; }
-.bvs-view.bvs-hide-search .bases-toolbar-item.bases-toolbar-search { display: none !important; }
-.bvs-view.bvs-hide-properties .bases-toolbar-item.bases-toolbar-properties-menu { display: none !important; }
-.bvs-view.bvs-hide-filter .bases-toolbar-item.bases-toolbar-filter-menu { display: none !important; }
-.bvs-view.bvs-hide-sort .bases-toolbar-item.bases-toolbar-sort-menu { display: none !important; }
+.bvs-view.bvs-hide-result-count .bases-toolbar-item.bases-toolbar-result-count { display: none ; }
+.bvs-view.bvs-hide-search .bases-toolbar-item.bases-toolbar-search { display: none ; }
+.bvs-view.bvs-hide-properties .bases-toolbar-item.bases-toolbar-properties-menu { display: none ; }
+.bvs-view.bvs-hide-filter .bases-toolbar-item.bases-toolbar-filter-menu { display: none ; }
+.bvs-view.bvs-hide-sort .bases-toolbar-item.bases-toolbar-sort-menu { display: none ; }
 
 /* ==========================================================
    自定义视图菜单样式
 ========================================================== */
-.bvs-view.bvs-custom-view-style .bases-toolbar { display: flex !important; align-items: center !important; gap: 4px !important; container-type: inline-size; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu { order: 10 !important; margin-left: auto !important; margin-right: 0 !important; padding: 0 !important; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-result-count { order: 20 !important; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-sort-menu { order: 30 !important; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-filter-menu { order: 40 !important; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-properties-menu { order: 50 !important; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu svg.lucide-chevrons-up-down { display: none !important; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu .text-button-label { font-size: 0 !important; }
+.bvs-view.bvs-custom-view-style .bases-toolbar { display: flex ; align-items: center ; gap: 4px ; container-type: inline-size; }
+.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu { order: 10 ; margin-left: auto ; margin-right: 0 ; padding: 0 ; }
+.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-result-count { order: 20 ; }
+.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-sort-menu { order: 30 ; }
+.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-filter-menu { order: 40 ; }
+.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-properties-menu { order: 50 ; }
+.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu svg.lucide-chevrons-up-down { display: none ; }
+.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu .text-button-label { font-size: 0 ; }
 .bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu .text-button-label::before { content: "视图"; font-size: 13px; color: var(--text-muted); margin-left: 2px; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu .text-icon-button { color: var(--icon-color) !important; background-color: transparent !important; padding: 4px 0px !important; border-radius: 10px; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu:hover .text-icon-button { background-color: var(--background-modifier-hover) !important; }
+.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu .text-icon-button { color: var(--icon-color) ; background-color: transparent ; padding: 4px 0px ; border-radius: 10px; }
+.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu:hover .text-icon-button { background-color: var(--background-modifier-hover) ; }
 .bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu:hover .text-button-label::before { color: var(--text-normal); }
-@container (max-width: 540px) { .bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu .text-button-label { display: none !important; } }
-
-/* ==========================================================
-   设置界面选项卡样式 (模仿浏览器/Easy Typing)
-========================================================== */
-.bvs-settings-tabs-container {
-    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;
-    padding-bottom: 10px; border-bottom: 1px solid var(--background-modifier-border);
-}
-.bvs-settings-tab {
-    padding: 6px 14px; border-radius: 6px; cursor: pointer;
-    background-color: var(--background-secondary); border: 1px solid var(--background-modifier-border);
-    color: var(--text-muted); font-size: 13px; transition: all 0.2s;
-}
-.bvs-settings-tab:hover { background-color: var(--background-modifier-hover); color: var(--text-normal); }
-.bvs-settings-tab.is-active {
-    background-color: var(--interactive-accent); color: var(--text-on-accent);
-    border-color: var(--interactive-accent); box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-weight: 500;
-}
-.bvs-settings-tab-add { padding: 6px 10px; border-style: dashed; }
-.bvs-settings-empty-state { text-align: center; padding: 40px 0; color: var(--text-muted); }
-
-
-/* ==========================================================
-   拖拽排序相关样式
-========================================================== */
-.bvs-draggable-item {
-    transition: background-color 0.2s, opacity 0.2s;
-}
-
-/* 拖拽把手图标 */
-.bvs-drag-handle {
-    cursor: grab;
-    color: var(--text-faint);
-    margin-right: 8px;
-    display: inline-flex;
-    align-items: center;
-    vertical-align: middle;
-    padding: 4px;
-    border-radius: var(--radius-s);
-}
-.bvs-drag-handle:hover {
-    color: var(--text-normal);
-    background-color: var(--background-modifier-hover);
-}
-.bvs-drag-handle:active {
-    cursor: grabbing;
-}
-
-/* 保证名字和把手能水平居中对齐 */
-.bvs-draggable-item .setting-item-name {
-    display: flex;
-    align-items: center;
-}
-
-/* 正在被拖拽的本体变半透明 */
-.bvs-draggable-item.is-dragging {
-    opacity: 0.4;
-    background-color: var(--background-modifier-hover);
-}
-
-/* 拖拽时的目标指示线 (使用内阴影防止挤压导致画面抖动) */
-.bvs-draggable-item.drag-over-top {
-    box-shadow: inset 0 2px 0 0 var(--interactive-accent);
-}
-.bvs-draggable-item.drag-over-bottom {
-    box-shadow: inset 0 -2px 0 0 var(--interactive-accent);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================
-   视图切换按钮样式
-========================================================== */
-.my-base-btns-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 6px;
-    flex: 1 1 auto; 
-    min-width: 0;   
-    overflow-x: auto; 
-    margin-left: 4px;
-    scrollbar-width: none; 
-}
-.my-base-btns-container::-webkit-scrollbar { display: none; }
-.my-base-btn {
-    flex-shrink: 0; display: flex; align-items: center; justify-content: center;
-    padding: 4px; border-radius: var(--radius-s); color: var(--text-muted); cursor: pointer;
-}
-.my-base-btn:hover { background-color: var(--background-modifier-hover); color: var(--text-normal); }
-
-/* ==========================================================
-   动态隐藏元素的样式 (精准作用于特定文件视图)
-========================================================== */
-.bvs-view.bvs-hide-result-count .bases-toolbar-item.bases-toolbar-result-count { display: none !important; }
-.bvs-view.bvs-hide-search .bases-toolbar-item.bases-toolbar-search { display: none !important; }
-.bvs-view.bvs-hide-properties .bases-toolbar-item.bases-toolbar-properties-menu { display: none !important; }
-.bvs-view.bvs-hide-filter .bases-toolbar-item.bases-toolbar-filter-menu { display: none !important; }
-.bvs-view.bvs-hide-sort .bases-toolbar-item.bases-toolbar-sort-menu { display: none !important; }
-
-/* ==========================================================
-   自定义视图菜单样式
-========================================================== */
-.bvs-view.bvs-custom-view-style .bases-toolbar { display: flex !important; align-items: center !important; gap: 4px !important; container-type: inline-size; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu { order: 10 !important; margin-left: auto !important; margin-right: 0 !important; padding: 0 !important; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-result-count { order: 20 !important; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-sort-menu { order: 30 !important; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-filter-menu { order: 40 !important; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-properties-menu { order: 50 !important; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu svg.lucide-chevrons-up-down { display: none !important; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu .text-button-label { font-size: 0 !important; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu .text-button-label::before { content: "视图"; font-size: 13px; color: var(--text-muted); margin-left: 2px; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu .text-icon-button { color: var(--icon-color) !important; background-color: transparent !important; padding: 4px 0px !important; border-radius: 10px; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu:hover .text-icon-button { background-color: var(--background-modifier-hover) !important; }
-.bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu:hover .text-button-label::before { color: var(--text-normal); }
-@container (max-width: 540px) { .bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu .text-button-label { display: none !important; } }
+@container (max-width: 540px) { .bvs-view.bvs-custom-view-style .bases-toolbar-item.bases-toolbar-views-menu .text-button-label { display: none ; } }
 
 /* ==========================================================
    设置界面选项卡样式 (模仿浏览器/Easy Typing)
@@ -263,9 +135,9 @@
 /* 响应式：当容器宽度小于 540px 时，覆盖闭眼模式，强制恢复为图标 */
 @container (max-width: 540px) {
     .my-base-btn.bvs-text-mode svg {
-        display: block !important;
+        display: block ;
     }
     .my-base-btn.bvs-text-mode .bvs-btn-text {
-        display: none !important;
+        display: none ;
     }
 }
