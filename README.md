@@ -1,54 +1,61 @@
+# Base View Switcher (数据库增强)
 
-# 数据库增强（Base View Switcher）
+A convenient view switcher for Obsidian Bases database files. Easily switch between views, customize toolbars, and streamline your database workflows.
 
-为 Obsidian 的 `.base` 数据库文件（Database）提供自定义视图切换按钮的插件。支持隐藏工具栏中不需要的元素，并应用自定义样式。
+[简体中文说明](#简体中文)
 
-## 功能特性
+---
 
-- **自定义视图按钮** – 根据 `.base` 文件 YAML 前置内容中定义的命名视图，添加对应的切换按钮。
-- **默认主页按钮** – 可选在左侧或右侧添加一个始终显示的“主页”按钮。
-- **工具栏清理** – 可按数据库分别隐藏“X 个结果”、“搜索”、“属性”、“筛选”、“排序”等按钮。
-- **自定义视图样式** – 启用紧凑按钮模式，避免小尺寸面板下按钮拥挤。
-- **独立配置文件** – 每个 `.base` 文件拥有独立的按钮配置。
-- **拖拽排序** – 在设置界面中轻松拖动调整自定义按钮顺序。
-- **图标选择器** – 选用 Obsidian 内置任意图标。
-- **显示模式** – 可切换为仅图标或图标+视图名称（适合宽屏）。
+## Features
+- Custom buttons for switching views quickly.
+- Beautifully rearrange or hide toolbar items (such as result counts, search, properties, filters, and sort menus).
+- Responsive view support.
 
-## 安装
+## Installation
 
-### 从 Obsidian 社区插件安装（发布后）
-1. 打开 Obsidian 设置 → 第三方插件 → 浏览。
-2. 搜索“数据库增强”或“Base View Switcher”。
-3. 安装并启用。
+### Community Plugins (Recommended)
+Once this plugin is approved, you can install it directly from Obsidian:
+1. Open Obsidian **Settings** > **Community plugins**.
+2. Click **Browse** and search for `Base View Switcher`.
+3. Click **Install**, then **Enable**.
 
-### 手动安装
-1. 从 [Releases](../../releases) 页面下载最新 `main.js` 和 `manifest.json`。
-2. 复制到你的仓库目录：`<仓库>/.obsidian/plugins/base-view-switcher/`。
-3. 重启 Obsidian，在设置 → 第三方插件中启用。
+### Manual Installation
+1. Download the latest release (`main.js`, `manifest.json`, `styles.css`) from the [Releases](https://github.com/hornatx/base-view-switcher/releases) page.
+2. Create a folder named `base-view-switcher` under your vault's plugin directory: `<vault>/.obsidian/plugins/base-view-switcher/`.
+3. Copy the downloaded files into that folder.
+4. Go to Obsidian **Settings** > **Community plugins** and enable the plugin.
 
-## 使用方法
+## Usage
+1. Open any `.base` database file in Obsidian.
+2. Go to the plugin settings to customize view switching buttons and choose which toolbar elements to hide.
+3. Use the generated top-bar buttons to switch views instantly.
 
-1. 创建一个 `.base` 文件（Obsidian 数据库），并在其 frontmatter 中至少定义一个命名视图，例如：
-   ```yaml
-   ---
-   views:
-     - name: 表格视图
-     - name: 卡片视图
-   ---
-   ```
-2. 打开插件设置。
-3. 点击 **“+ 添加数据库”**，选择你要配置的 `.base` 文件。
-4. 进行配置：
-   - **启用自定义视图菜单样式** – 解决窄面板下按钮被挤压的问题。
-   - **隐藏 X 元素** – 切换显示/隐藏结果计数、搜索、属性、筛选、排序按钮。
-   - **默认按钮** – 启用并选择默认视图（例如“主视图”）及其位置。
-   - **自定义按钮** – 点击“+ 添加”创建新按钮。  
-     - 单击图标按钮（默认为星标）打开图标选择器。  
-     - 单击选择视图名称，从建议列表中选取。  
-     - 切换按钮样式（仅图标 / 图标+文字）。  
-     - 拖拽六点手柄调整顺序。  
-     - 点击垃圾桶删除。
-5. 按钮会立即显示在该 `.base` 文件的工具栏中。
+---
 
-> **注意：** 插件从 `.base` 文件的 YAML frontmatter 中读取视图名称，请确保 `views[].name` 存在。
+## 简体中文
 
+适用于 Obsidian Bases 数据库文件的视图切换器，支持快速在多个视图间切换、自定义工具栏排列及响应式布局。
+
+### 功能特点
+- 支持创建自定义切换视图按钮。
+- 美化或隐藏工具栏元素（如结果统计、搜索、属性、筛选和排序菜单）。
+- 支持响应式自适应布局。
+
+### 安装方法
+
+#### 社区插件安装（推荐）
+待插件上架后，可在 Obsidian 内直接安装：
+1. 打开 Obsidian **设置** > **社区插件**。
+2. 点击 **浏览** 并搜索 `Base View Switcher`。
+3. 点击 **安装**，随后启用。
+
+#### 手动安装
+1. 从 [Releases](https://github.com/hornatx/base-view-switcher/releases) 页面下载最新版发布包（`main.js`, `manifest.json`, `styles.css`）。
+2. 在您的库中创建插件目录：`<库路径>/.obsidian/plugins/base-view-switcher/`。
+3. 将下载的文件放入该目录中。
+4. 打开 Obsidian **设置** > **社区插件**，开启该插件。
+
+### 使用说明
+1. 在 Obsidian 中打开任意 `.base` 数据库文件。
+2. 访问插件设置页面配置视图切换按钮，并选择需要隐藏的工具栏项。
+3. 通过顶部状态栏中生成的按钮一键切换视图。
