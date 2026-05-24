@@ -2,6 +2,7 @@
 
 A convenient view switcher for Obsidian Bases database files. Easily switch between views, customize toolbars, and streamline your database workflows.
 
+插件还在测试当中,如果有bug或错误,加群讨论
 QQ交流群:599796635
 
 [简体中文说明](#简体中文)
