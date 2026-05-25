@@ -1,7 +1,7 @@
 {
   "id": "base-view-switcher",
   "name": "数据库增强",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "minAppVersion": "1.4.0",
   "description": "Add custom view switching buttons to the Base database title bar.",
   "author": "hornat",

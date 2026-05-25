@@ -141,3 +141,49 @@
         display: none ;
     }
 }
+
+
+/* 取消新建 */
+
+svg.svg-icon.lucide-plus {
+    display: none;
+}
+
+div.bases-toolbar-item.bases-toolbar-new-item-menu{
+        display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
