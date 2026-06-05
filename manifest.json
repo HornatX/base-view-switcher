@@ -5,5 +5,6 @@
   "minAppVersion": "1.4.0",
   "description": "Add custom view switching buttons to the Base database title bar.",
   "author": "hornat",
+  "authorUrl": "",
   "isDesktopOnly": true
 }
